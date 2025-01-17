@@ -22,8 +22,8 @@ def main():
     
     # Access workspace and project
     workspace = rf.workspace("aetos")
-    project = workspace.project("thermal1_copy_temp")
-    version = project.version(4)
+    project = workspace.project("aerial-drone-1-copy")
+    version = project.version(2)
     dataset = version.download("yolov11")
     
     print("Dataset downloaded successfully to:", datasets_path)
