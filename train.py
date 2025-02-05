@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import wandb
+wandb.login(key="ef999c477c85e5d7f73f966fdc49c047c23a5987")
 wandb.init(project='yolo-train')
 # Load a model
 model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
