@@ -22,15 +22,15 @@
 # from ray import tune
 
 from ultralytics import YOLO
-# import wandb
-search_space={"lr0": (1e-5, 1e-1), "weight_decay": (0.0, 0.001)}
-# wandb.init(project='yolo11_tuning')
+import wandb
+search_space={"lr0": tune.uniform(1e-5, 1e-1), "weight_decay": tune.uniform(0.0, 0.001)}
+wandb.init(project='yolo11_tuning')
 # Define a YOLO model
 model = YOLO("yolo11x-seg.pt")
 
 # Run Ray Tune on the model
 result_grid = model.tune(
-    data="/home/kirti/Training/datasets/ptz_seg_polygon_Aug/ptz_seg_polygon-copy1-1/data.yaml",
+    data="/Testing/ptz_seg_polygon_Aug/ptz_seg_polygon-copy1-1/data.yaml",
     space=search_space,
     iterations=100,
     epochs=300,
