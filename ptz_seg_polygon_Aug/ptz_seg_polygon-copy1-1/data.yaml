@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['LMV', 'civilian', 'soldier', 'terrorist']
+
+roboflow:
+  workspace: aetos
+  project: ptz_seg_polygon-copy1
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/aetos/ptz_seg_polygon-copy1/1
