@@ -28,7 +28,7 @@ wandb.login(key="ef999c477c85e5d7f73f966fdc49c047c23a5987")
 search_space={"lr0": tune.uniform(1e-5, 1e-1), "weight_decay": tune.uniform(0.0, 0.001)}
 wandb.init(project='yolo11_tuning')
 # Define a YOLO model
-model = YOLO("yolo11x-seg.pt")
+model = YOLO("yolo11s-seg.pt")
 
 # Run Ray Tune on the model
 result_grid = model.tune(
