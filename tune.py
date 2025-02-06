@@ -32,7 +32,7 @@ model = YOLO("yolo11x-seg.pt")
 
 # Run Ray Tune on the model
 result_grid = model.tune(
-    data="/ptz_seg_polygon_Aug/ptz_seg_polygon-copy1-1/data.yaml",
+    data="/Testing/ptz_seg_polygon_Aug/ptz_seg_polygon-copy1-1/data.yaml",
     space=search_space,
     iterations=100,
     epochs=300,
